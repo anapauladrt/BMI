@@ -103,10 +103,10 @@ def entrada_dados():
     if not idade_salvo.isdigit():
         messagebox.showwarning(title="Idade", message="Coloque apenas números em idade!")
         return
-    elif not peso_salvo.replace(".", "", 1).isdigit():
+    elif not peso_salvo.replace(".", "", 1).isdigit() or peso_salvo.isalpha():
         messagebox.showwarning(title="Peso", message="Coloque apenas números em peso!")
         return
-    elif not altura_salvo.replace(".", "", 1).isdigit():
+    elif not altura_salvo.replace(".", "", 1).isdigit() or altura_salvo.isalpha():
         messagebox.showwarning(title="Altura", message="Coloque apenas números em altura!")
         return
     elif genero_salvo not in ["Masculino", "Feminino"]:
